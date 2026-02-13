@@ -35,9 +35,11 @@ body {
 }
 
 /* CONTENEDOR ANCHO */
+/* CONTENEDOR ANCHO */
 .main-stage {
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
+    /* Aumentado para escritorio (antes 500px) */
     z-index: 1;
     /* Asegura que esté sobre el fondo */
 }
