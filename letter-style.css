@@ -1,0 +1,30 @@
+/* Estilos específicos para la Carta */
+.letter-greeting {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    /* Saludo alineado a la izquierda */
+    color: #4b2c20;
+}
+
+.letter-signature {
+    font-family: 'Pirata One', cursive;
+    font-size: 2rem;
+    color: #8b0000;
+    /* Rojo tinta para la firma */
+    margin-top: 2rem;
+    text-align: right;
+    /* Firma alineada a la derecha */
+    transform: rotate(-2deg);
+    /* Ligera inclinación para realismo */
+}
+
+/* Ajustes generales del texto de la carta */
+.story-text p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    /* Justificado como una carta real */
+    text-justify: inter-word;
+}

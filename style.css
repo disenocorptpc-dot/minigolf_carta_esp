@@ -1,0 +1,143 @@
+/* 
+  ESTILO LIMPIO Y ROBUSTO - FINAL
+  Integra el efecto Vignette solicitado sobre un patrón CSS base.
+*/
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* FONDO: Madera Real desde URL Externa + Efecto Vignette */
+    background-color: #2b1d14;
+    background-image:
+        /* CAPA 1: Vignette (Sombra en los bordes) - Mantiene el drama */
+        radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.95) 100%),
+        /* CAPA 2: Textura de Madera Real desde Internet (Unsplash) */
+        url('https://images.unsplash.com/photo-1605315570248-c87a55383500?q=80&w=2000&auto=format&fit=crop');
+
+    background-attachment: fixed;
+    /* Parallax simple: el fondo se queda quieto */
+    background-size: cover;
+    /* Cubre toda la pantalla */
+    background-position: center;
+
+    font-family: 'IM Fell DW Pica', serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    color: #4b3621;
+}
+
+/* CONTENEDOR ANCHO */
+.main-stage {
+    width: 100%;
+    max-width: 500px;
+    z-index: 1;
+    /* Asegura que esté sobre el fondo */
+}
+
+/* ESTRUCTURA DEL PERGAMINO */
+.parchment-wrapper {
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.7));
+}
+
+/* 1. CABECERA (Placeholder visual del borde rasgado) */
+.parchment-top {
+    height: 60px;
+    background: #e8dcb5;
+    border-radius: 10px 10px 0 0;
+    /* Efecto visual simple de "borde" mientras no hay imagen */
+    background-image: linear-gradient(to bottom, #d6c698, #e8dcb5);
+    border-bottom: 1px dashed rgba(75, 54, 33, 0.2);
+}
+
+/* 2. CUERPO (Se adapta al contenido) */
+.parchment-body {
+    background: #e8dcb5;
+    padding: 1rem 2rem 2rem 2rem;
+    text-align: center;
+    /* Textura de papel sutil interna */
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* 3. PIE (Placeholder visual del borde rasgado) */
+.parchment-bottom {
+    height: 40px;
+    background: #e8dcb5;
+    border-radius: 0 0 10px 10px;
+    background-image: linear-gradient(to top, #d6c698, #e8dcb5);
+    border-top: 1px dashed rgba(75, 54, 33, 0.2);
+}
+
+/* TIPOGRAFÍA */
+header {
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-family: 'Pirata One', cursive;
+    font-size: 3.5rem;
+    color: #a81c1c;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px rgba(232, 220, 181, 0.5);
+}
+
+.sub-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    color: #3e2723;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.story-text p {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    color: #3e2723;
+}
+
+.story-text strong {
+    color: #8b0000;
+    font-weight: normal;
+}
+
+.separator {
+    border: 0;
+    height: 2px;
+    background: radial-gradient(circle, rgba(93, 64, 55, 0.5) 0%, transparent 100%);
+    margin: 2rem 0;
+}
+
+.cta-section p {
+    font-family: 'Pirata One', cursive;
+    color: #a81c1c;
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.brand-logo {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Pirata One', cursive;
+    font-size: 2.2rem;
+    color: #d4af37;
+    text-shadow: 2px 2px 0 #000;
+    /* Borde visual */
+    background: #2b1d14;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
