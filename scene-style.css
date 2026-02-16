@@ -1,0 +1,12 @@
+/* Estilos para las escenas de la historia */
+.story-scene {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #5d4037;
+    /* Marco estilo antiguo */
+    display: block;
+}
